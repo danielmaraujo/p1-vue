@@ -1,19 +1,19 @@
 {
-  "users": [
+  "paises": [
     {
       "id": 1,
-      "name": "Andre Marques",
-      "location": "Brazil"
+      "nome": "Brasil",
+      "capital": "Brasília"
     },
     {
       "id": 2,
-      "name": "Julio",
-      "location": "Canadá"
+      "nome": "França",
+      "capital": "Paris"
     },
     {
-      "id": "3",
-      "name": "Luciana",
-      "location": "Brasil"
+      "id": 3,
+      "nome": "Argentina",
+      "capital": "Buenos Aires"
     }
   ]
 }

@@ -2,10 +2,10 @@
   <v-container>
     <v-row class="text-center">
       <v-col cols="12">
-           <h1> UserCrud </h1>
+           <h1> PaísesCrud </h1>
            <v-data-table
               :headers="headers"
-              :items="users"
+              :items="paises"
               :search="search"
               sort-by="id"
               class="elavation-1">
@@ -18,22 +18,21 @@
 import axios from "axios"
 
 export default {
-  name: "UserCrud",
+  name: "PaisesCrud",
   data: () => ({
     search:"",
     headers: [
       { text: "Id", value: "id"},
-      { text: "Nome", value: "name"},
-      { text: "País", value: "location"},
-      { text: "Actions", value: "actions", sortable: false}
+      { text: "Nome", value: "nome"},
+      { text: "Capital", value: "capital"}
     ],
-    users: []
+    paises: []
   }),
   methods: {
     inicializa() {
-      axios.get('http://localhost:3000/users')
+      axios.get('http://localhost:3000/paises')
         .then((response) => {
-          this.users = response.data
+          this.paises = response.data
         })
         .catch((error)=> console.log(error))
     }
